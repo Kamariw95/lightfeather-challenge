@@ -22,19 +22,19 @@ const IndexPage = (props: PageProps) => (
         <div className="sign-up-form">
           <div className="sign-up-row">
             <label className="container-label">Username</label>
-            <input className="sign-up-input"/>
+            <input className="sign-up-input" type="text"/>
           </div>
           <div className="sign-up-row">
             <label className="container-label">Email</label>
-            <input className="sign-up-input"/>
+            <input className="sign-up-input" type="text"/>
           </div>
           <div className="sign-up-row">
             <label className="container-label">Password</label>
-            <input className="sign-up-input"/>
+            <input className="sign-up-input" type="password"/>
           </div>
           <div className="sign-up-row">
             <label className="container-label">Confirm Password</label>
-            <input className="sign-up-input"/>
+            <input className="sign-up-input" type="password"/>
           </div>
           <div className="button-row">
             <button className="submit-button">Submit</button>
