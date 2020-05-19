@@ -61,4 +61,21 @@
     border-radius: 10px;
     border: none;
     background-color: #663399;
+    box-shadow: 4px 5px #47236b;
+}
+.submit-button:active {
+    box-shadow: none;
+    transform: translateY(4px);
+}
+
+.submit-button:hover {
+    cursor: pointer;
+}
+
+.submit-button:disabled {
+    background-color: #b2b2b2;
+    color: grey;
+    box-shadow:none;
+    cursor: initial;
+    transform: none;
 }

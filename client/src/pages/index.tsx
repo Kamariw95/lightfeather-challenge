@@ -37,7 +37,7 @@ const IndexPage = (props: PageProps) => (
             <input className="sign-up-input" type="password"/>
           </div>
           <div className="button-row">
-            <button className="submit-button">Submit</button>
+            <button className="submit-button" disabled={true}>Submit</button>
           </div>
         </div>
       </div>
