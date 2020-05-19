@@ -1,3 +1,14 @@
+/* base CSS that I've tweaked over time. */
+
+html,
+body,
+#___gatsby,
+#gatsby-focus-wrapper,
+.layout,
+main {
+  height: 100%;
+}
+
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;

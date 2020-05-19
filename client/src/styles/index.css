@@ -1,0 +1,59 @@
+.gatsby-img {
+    max-width: 300px;
+    margin: 9rem auto 0 auto;
+}
+
+.sign-up-input {
+    border-radius: 10px;
+    box-shadow: none;
+    border: 1px solid rebeccapurple;
+    padding: .3rem .5rem;
+}
+
+.sign-up-row { 
+    display: flex; 
+    flex-direction: column;
+    margin-bottom: 1.5rem;
+}
+
+.sign-up-form {
+    width: 55%; 
+    margin: 8rem auto 0 auto;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    height: 100%;
+    font-family: Helvetica, sans-serif;
+}
+
+.container {
+    width: 50%; 
+}
+
+.container-label {
+    font-weight: bold;
+}
+
+.left-container {
+    border-right: 1px solid rebeccapurple;
+}
+
+.button-row {
+    width: 100%; 
+    text-align: center;
+}
+
+.submit-button { 
+    padding: .6rem 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 1.5rem;
+    width: 100%;
+    color: white;
+    border-radius: 10px;
+    border: none;
+    background-color: #663399;
+}
