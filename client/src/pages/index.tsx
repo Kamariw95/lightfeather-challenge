@@ -14,7 +14,7 @@ class IndexPage extends React.Component {
   render() {
     return (
       <Layout>
-        <div className="main-container">
+        <div className="main-container purple-bkgrnd">
           <SignUpForm />
         </div>
         <Link to="/slightly-better-design">Slightly better design here...</Link>

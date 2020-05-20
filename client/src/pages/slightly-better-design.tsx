@@ -20,7 +20,7 @@ class IndexPage extends React.Component {
               <Image />
             </div>
           </div>
-          <div className="container right-container">
+          <div className="container right-container purple-bkgrnd">
               <SignUpForm />
           </div>
         </div>
