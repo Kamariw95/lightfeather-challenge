@@ -6,19 +6,23 @@ class ValidationFields {
 }
 
 class Validator {
-    validatePassword(password: string, confirmPassword: string) : boolean {
-        return (password === confirmPassword) && password.length > 6
+    isValidPassword(password: string, confirmPassword: string) : boolean {
+        return !this.isPasswordEmpty(password) && (password === confirmPassword)
     }
-    validateEmail(email: string) : boolean {
+    isValidEmail(email: string) : boolean {
         return true
     }
 
-    validateUsername(username: string) : boolean {
+    isValidUsername(username: string) : boolean {
         return username.length <= 15 && username.length > 0
+    }
+
+    isPasswordEmpty(password: string) : boolean {
+        return password.length == 0
     }
     
     isButtonDisabled(fields: ValidationFields) {
-        return !(this.validateEmail(fields.email) && this.validateUsername(fields.username) && this.validatePassword(fields.password, fields.confirmPassword))
+        return !(this.isValidEmail(fields.email) && this.isValidUsername(fields.username) && this.isValidPassword(fields.password, fields.confirmPassword))
     }
 }
 

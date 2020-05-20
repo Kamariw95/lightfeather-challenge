@@ -8,6 +8,11 @@
     box-shadow: none;
     border: 1px solid rebeccapurple;
     padding: .3rem .5rem;
+    transition: background-color .7s;
+}
+
+.sign-up-input:focus {
+    background-color: #F4B045;
 }
 
 .sign-up-row { 
