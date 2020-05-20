@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from "gatsby"
+
 import Layout from "../components/layout"
 import Image from "../components/image"
 import SignUpForm from "../components/signUpForm"
@@ -15,9 +15,15 @@ class IndexPage extends React.Component {
     return (
       <Layout>
         <div className="main-container">
-          <SignUpForm />
+          <div className="container left-container">
+            <div className="gatsby-img">
+              <Image />
+            </div>
+          </div>
+          <div className="container right-container">
+              <SignUpForm />
+          </div>
         </div>
-        <Link to="/slightly-better-design">Slightly better design here...</Link>
       </Layout>
     )
   }
