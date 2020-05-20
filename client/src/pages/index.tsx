@@ -2,19 +2,28 @@ import React from "react"
 
 import Layout from "../components/layout"
 import Image from "../components/image"
-import SEO from "../components/seo"
+import Validator from "../utils/validator"
 
 import '../styles/index.css'
 
 interface IState {
   fields: Object;
   errors: Object;
+  buttonDisabled: boolean
 }
+
+let validator = new Validator()
 
 class IndexPage extends React.Component<IState> {
   readonly state = {
-    fields: {},
-    errors: {}
+    fields: {
+      "username": "",
+      "email": "",
+      "password": "",
+      "confirmPassword": ""
+    },
+    errors: {},
+    buttonDisabled: true 
   };
 
   constructor(props) {
@@ -29,6 +38,8 @@ class IndexPage extends React.Component<IState> {
     this.setState({
       fields
     });
+
+    this.state.buttonDisabled = validator.isButtonDisabled(fields)
   }
 
   render() {
@@ -56,10 +67,10 @@ class IndexPage extends React.Component<IState> {
               </div>
               <div className="sign-up-row">
                 <label className="container-label">Confirm Password</label>
-                <input className="sign-up-input" name="confirm-password" type="password" onChange={this.handleChange}/>
+                <input className="sign-up-input" name="confirmPassword" type="password" onChange={this.handleChange}/>
               </div>
               <div className="button-row">
-                <button className="submit-button" disabled={false}>Submit</button>
+                <button className="submit-button" disabled={this.state.buttonDisabled}>Submit</button>
               </div>
             </div>
           </div>
