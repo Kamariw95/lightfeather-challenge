@@ -13,7 +13,7 @@
 .sign-up-row { 
     display: flex; 
     flex-direction: column;
-    height: 5.6rem;
+    height: 5.8rem;
 }
 
 .error-message {
