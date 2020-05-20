@@ -1,7 +1,8 @@
 import React from "react"
 import Validator from "../utils/validator"
+import SignUpRow from "./signUpRow";
 
-import '../styles/index.css'
+import '../styles/components/signUpForm.css'
 
 interface IState {
   fields: Object;
@@ -74,29 +75,46 @@ class SignUpForm extends React.Component<{}, IState> {
   render() {
     return (
         <div className="sign-up-form">
-            <div className="sign-up-row">
-                <label className="container-label">Username</label>
-                <input className="sign-up-input" name="username" maxLength={15} type="text" onBlur={this.handleBlur} onChange={this.handleChange}/>
-                {this.state.showUsernameError && <p className="error-message">Please enter a correct username.</p>}
-            </div>
+            <SignUpRow
+                label="Username"
+                inputName="username"
+                maxLength={15}
+                inputType="text"
+                handleBlur={this.handleBlur}
+                handleChange={this.handleChange}
+                showError={this.state.showUsernameError}
+                errorMessage={"Please enter a correct username."}
+            />
+
+            <SignUpRow
+                label="Email"
+                inputName="email"
+                inputType="email"
+                handleBlur={this.handleBlur}
+                handleChange={this.handleChange}
+                showError={this.state.showEmailError}
+                errorMessage={"Please enter a correct email."}
+            />
             
-            <div className="sign-up-row">
-                <label className="container-label">Email</label>
-                <input className="sign-up-input" name="email" type="email" onBlur={this.handleBlur} onChange={this.handleChange}/>
-                {this.state.showEmailError && <p className="error-message">Please enter a correct email.</p>}
-            </div>
-            
-            <div className="sign-up-row">
-                <label className="container-label">Password</label>
-                <input className="sign-up-input" name="password" type="password" onBlur={this.handleBlur} onChange={this.handleChange}/>
-                {this.state.showPasswordError && <p className="error-message">Please enter a password.</p>}
-            </div>
-            
-            <div className="sign-up-row">
-                <label className="container-label">Confirm Password</label>
-                <input className="sign-up-input" name="confirmPassword" type="password" onBlur={this.handleBlur} onChange={this.handleChange}/>
-                {this.state.showConfirmPasswordError && <p className="error-message">Please confirm your password.</p>}
-            </div>
+            <SignUpRow
+                label="Password"
+                inputName="password"
+                inputType="password"
+                handleBlur={this.handleBlur}
+                handleChange={this.handleChange}
+                showError={this.state.showPasswordError}
+                errorMessage={"Please enter a password."}
+            />
+
+            <SignUpRow
+                label="Confirm Password"
+                inputName="confirmPassword"
+                inputType="password"
+                handleBlur={this.handleBlur}
+                handleChange={this.handleChange}
+                showError={this.state.showConfirmPasswordError}
+                errorMessage={"Please confirm your password."}
+            />
             
             <div className="button-row">
                 <button className="submit-button" disabled={this.state.buttonDisabled}>Submit</button>

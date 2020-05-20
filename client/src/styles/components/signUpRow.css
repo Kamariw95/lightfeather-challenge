@@ -1,0 +1,24 @@
+.sign-up-input {
+    border-radius: 10px;
+    box-shadow: none;
+    border: 1px solid rebeccapurple;
+    padding: .3rem .5rem;
+    transition: background-color .7s;
+}
+
+.sign-up-input:focus {
+    background-color: #F4B045;
+}
+
+.sign-up-row { 
+    display: flex; 
+    flex-direction: column;
+    height: 5.6rem;
+}
+
+.error-message {
+    margin-bottom: 0;
+    font-size: .8rem;
+    color: #ed4048;
+    font-weight: bold;
+}

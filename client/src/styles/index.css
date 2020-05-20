@@ -3,29 +3,6 @@
     margin: 9rem auto 0 auto;
 }
 
-.sign-up-input {
-    border-radius: 10px;
-    box-shadow: none;
-    border: 1px solid rebeccapurple;
-    padding: .3rem .5rem;
-    transition: background-color .7s;
-}
-
-.sign-up-input:focus {
-    background-color: #F4B045;
-}
-
-.sign-up-row { 
-    display: flex; 
-    flex-direction: column;
-    margin-bottom: 1.5rem;
-}
-
-.sign-up-form {
-    width: 53%; 
-    margin: 8rem auto 0 auto;
-}
-
 .main-container {
     display: flex;
     flex-direction: row;
@@ -51,36 +28,3 @@
     background-color: #c796e8;
 }
 
-.button-row {
-    width: 100%; 
-    text-align: center;
-}
-
-.submit-button { 
-    padding: .6rem 1rem;
-    font-size: 1.2rem;
-    font-weight: bold;
-    margin-top: 1.5rem;
-    width: 100%;
-    color: white;
-    border-radius: 10px;
-    border: none;
-    background-color: #663399;
-    box-shadow: 4px 5px #47236b;
-}
-.submit-button:active {
-    box-shadow: none;
-    transform: translateY(4px);
-}
-
-.submit-button:hover {
-    cursor: pointer;
-}
-
-.submit-button:disabled {
-    background-color: #b2b2b2;
-    color: grey;
-    box-shadow:none;
-    cursor: initial;
-    transform: none;
-}
