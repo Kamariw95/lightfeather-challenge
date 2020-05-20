@@ -6,7 +6,6 @@
  */
 
 import React from "react"
-import Header from "./header"
 
 import "../styles/components/layout.css"
 

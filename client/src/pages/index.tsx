@@ -1,19 +1,39 @@
 import React from "react"
 
-import { PageProps, Link } from "gatsby"
-
 import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
 
-
 import '../styles/index.css'
 
-class IndexPage extends React.Component {
+interface IState {
+  fields: Object;
+  errors: Object;
+}
+
+class IndexPage extends React.Component<IState> {
+  readonly state = {
+    fields: {},
+    errors: {}
+  };
+
+  constructor(props) {
+    super(props);
+
+    this.handleChange = this.handleChange.bind(this);
+  };
+
+  handleChange(e) {
+    let fields = this.state.fields;
+    fields[e.target.name] = e.target.value;
+    this.setState({
+      fields
+    });
+  }
+
   render() {
     return (
       <Layout>
-        <SEO title="Home" />
         <div className="main-container">
           <div className="container left-container">
             <div className="gatsby-img">
