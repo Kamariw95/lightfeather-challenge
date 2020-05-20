@@ -36,3 +36,7 @@
     cursor: initial;
     transform: none;
 }
+
+.submit-button:active {
+    background-color: green;
+}
