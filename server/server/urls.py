@@ -15,7 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from server.api.views import EncoderAPIView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('api/encode/', EncoderAPIView.as_view())
 ]
