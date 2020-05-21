@@ -56,7 +56,5 @@ To test this, I used `cURL`. Here's an example:
 
 `curl -d '{"Shift":3, "Message":"dad is a test"}' -H "Content-Type: application/json" -X POST http://localhost:23456/api/encode/`.
 
-Also, you can go [here](http://127.0.0.1:23456/api/encode/) in the brower and test the `POST` request.
-
 __NOTE:__ There will be a message about running migrations in the terminal. It adds authentication to the application, so please, avoid it if you can.
 
