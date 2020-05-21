@@ -28,3 +28,16 @@
     background-color: #c796e8;
 }
 
+
+.index-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    font-family: Helvetica, sans-serif;
+}
+
+.extra-link {
+    margin-top: 4rem;
+    text-align: center;
+}
+
