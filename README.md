@@ -48,10 +48,12 @@ This installs all of the packages needed to run the server application.
 
 In your terminal (& in the same folder as before), run: 
 
-__1.__ `python3 manage.py runserver`
+__1.__ `python manage.py runserver`
 
 The project should be running on port `23456` and callable via `localhost`. 
 
 To test this, I used `cURL`. Here's an example:
 
 `curl -d '{"Shift":3, "Message":"dad is a test"}' -H "Content-Type: application/json" -X POST http://localhost:23456/api/encode/`.
+
+__NOTE:__ There will be a message about running migrations in the terminal. It adds authentication to the application, so please, avoid it if you can.
