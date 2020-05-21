@@ -1,0 +1,7 @@
+# Text Editor
+.vscode/
+
+# Server
+__pycache__/
+venv/
+db.sqlite3
